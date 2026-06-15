@@ -15,7 +15,9 @@ df = pd.read_csv('Processed_daily_sales.csv')
 app = Dash(__name__)
 
 app.layout = html.Div([
+    html.H1("Sales Dashboard", id="header"),
     dcc.Dropdown(
+
         id="region-dropdown",
         options=[{"label": "All Regions", "value": "ALL"}] +
                 [{"label": r, "value": r}
